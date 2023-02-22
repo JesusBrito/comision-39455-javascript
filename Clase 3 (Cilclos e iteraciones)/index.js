@@ -123,20 +123,20 @@ while(true){
 //     break;
 // }
 
-// let seleccionUsuario = parseInt(
-//   prompt(
-//     "Que desea comer: \n 1.Una Hamburguesa \n 2.Un Taco \n 3.Un Hot dog \n 4.Unos Nachos"
-//   )
-// );
-// if (seleccionUsuario === 1) {
-//   alert("Usted selecciono una Hamburguesa");
-// } else if (seleccionUsuario === 2) {
-//   alert("Usted selecciono un Taco");
-// } else if (seleccionUsuario === 3) {
-//   alert("Usted selecciono un Hot dog");
-// } else if (seleccionUsuario === 4) {
-//   alert("Usted selecciono un Hot dog");
-// }
+let seleccionUsuario = parseInt(
+  prompt(
+    "Que desea comer: \n 1.Una Hamburguesa \n 2.Un Taco \n 3.Un Hot dog \n 4.Unos Nachos"
+  )
+);
+if (seleccionUsuario === 1) {
+  alert("Usted selecciono una Hamburguesa");
+} else if (seleccionUsuario === 2) {
+  alert("Usted selecciono un Taco");
+} else if (seleccionUsuario === 3) {
+  alert("Usted selecciono un Hot dog");
+} else if (seleccionUsuario === 4) {
+  alert("Usted selecciono un Hot dog");
+}
 
 // let seleccionUsuario = parseInt(
 //   prompt(
