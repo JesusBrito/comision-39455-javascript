@@ -103,7 +103,7 @@
 
 // let arrayProductos = ["Laptop", "PC", "Celular"];
 
-// //Reverse es destructivo, modifica el array original
+// Reverse es destructivo, modifica el array original
 // console.log(arrayProductos.reverse())
 
 //================ FOR OF ================
