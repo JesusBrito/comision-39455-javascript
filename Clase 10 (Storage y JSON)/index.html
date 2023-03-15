@@ -13,51 +13,43 @@
     />
   </head>
   <body>
-    <!-- <div class="container mt-3">
-      <div>
-        <h3>Ejemplo uno</h3>
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-primary" id="btnEventoUno">
-              Ejemplo uno
-            </button>
+    <div class="container p-3">
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-warning" id="limpiarStorage">
+            Limpiar Storage
+          </button>
+        </div>
+        <div class="col-md-6">
+          <div id="contenedorUsuario" hidden>
+            <p id="textoUsuario">Bienvenido:</p>
           </div>
-          <div class="col-md-4">
-            <button class="btn btn-primary" id="btnEventoDos">
-              Ejemplo dos
-            </button>
-          </div>
-          <div class="col-md-4">
-            <button class="btn btn-primary" 
-            onclick="mostrarAlert()">
-              Ejemplo tres
-            </button>
+          <div id="contenedorIdentificacion">
+            <h2>Identificate</h2>
+            <form id="formularioIdentificacion">
+              <div class="row">
+                <div class="col-md-8">
+                  <div>
+                    <label class="form-label">Nombre</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputUsuario"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                  <button type="submit" class="btn btn-secondary">
+                    Identificarse
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <h3>Ejemplos eventos mouse</h3>
-      <button class="btn btn-primary" id="boton">Botón ejemplo</button>
-    </div>
-    <div class="container">
-      <h3>Ejemplos eventos teclado</h3>
-      <div class="mb-3">
-        <input class="form-control" id="nombre" type="text" />
-      </div>
-      <div>
-        <input class="form-control" id="edad" type="number" />
-      </div>
-    </div>
-   
- <div class="container">
-      <form id="formulario">
-        <input type="text" />
-        <input type="number" />
-        <input type="submit" value="Enviar" />
-      </form>
-    </div> -->
-    <div class="container p-3">
+      <hr />
       <div class="row">
         <div class="col-md-6">
           <div id="contenedorProductos" class="row"></div>
@@ -67,7 +59,7 @@
           <form id="formulario">
             <div class="mb-3">
               <label class="form-label">ID</label>
-              <input type="text" class="form-control" id="inputId" />
+              <input type="text" class="form-control" id="inputId" required />
             </div>
             <div class="mb-3">
               <label class="form-label">Nombre</label>
@@ -75,6 +67,7 @@
                 type="text"
                 class="form-control"
                 id="inputNombreProducto"
+                required
               />
             </div>
 
@@ -84,17 +77,28 @@
                 type="number"
                 class="form-control"
                 id="inputPrecioCompra"
+                required
               />
             </div>
 
             <div class="mb-3">
               <label class="form-label">Precio venta</label>
-              <input type="number" class="form-control" id="inputPrecioVenta" />
+              <input
+                type="number"
+                class="form-control"
+                id="inputPrecioVenta"
+                required
+              />
             </div>
 
             <div class="mb-3">
               <label class="form-label">Cantidad</label>
-              <input type="number" class="form-control" id="inputCantidad" />
+              <input
+                type="number"
+                class="form-control"
+                id="inputCantidad"
+                required
+              />
             </div>
 
             <div class="mb-3">
