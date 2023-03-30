@@ -207,13 +207,13 @@
 //================ REST ================
 
 function sumar(...numeros) {
-    console.log("LOS PARÁMETROS RECIBIDOS SON: ");
-    console.log(numeros);
-  
-    let sumatoria = numeros.reduce((acumulador, valor) => acumulador + valor, 0);
-    return sumatoria;
-  }
-  
-  console.log(sumar(4, 2));
-  console.log(sumar(10, 15, 30, 5));
-  console.log(sumar(100, 300, 50));
+  console.log("LOS PARÁMETROS RECIBIDOS SON: ");
+  console.log(numeros);
+
+  let sumatoria = numeros.reduce((acumulador, valor) => acumulador + valor, 0);
+  return sumatoria;
+}
+
+console.log(sumar(4, 2));
+console.log(sumar(10, 15, 30, 5));
+console.log(sumar(100, 300, 50));

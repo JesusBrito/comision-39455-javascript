@@ -7,6 +7,14 @@ function mostrarSwal() {
     icon: "success",
     title: "Mensaje mostrado",
   });
+  .then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: `${result.value.login}'s avatar`,
+        imageUrl: result.value.avatar_url
+      })
+    }
+  })
 }
 
 const botonToast = document.getElementById("btnMostrarToast");
