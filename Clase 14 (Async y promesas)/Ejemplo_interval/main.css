@@ -1,0 +1,17 @@
+.remaining-item {
+  background-color: rgba(0, 0, 0, 0.3490196078);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  font-family: "Sans serif", cursive;
+  border-radius: 1rem;
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.27);
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.27);
+}
+.remaining-item p:nth-child(1) {
+  font-size: 2rem;
+}
+.remaining-item p:nth-child(2) {
+  font-size: 1rem;
+}
