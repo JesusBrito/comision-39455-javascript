@@ -133,14 +133,11 @@ function validarFormulario(event) {
       cantidad
     );
 
-    productos.push(producto);
+    //productos.push(producto);
     formulario.reset();
-    actualizarProductosStorage();
-    pintarProductos();
-    mostrarMensajeConfirmacion(
-      `El producto ${nombre} fue agregado exitosamente`,
-      "info"
-    );
+    //actualizarProductosStorage();
+    //pintarProductos();
+    crearProductoServer(producto);
   } else {
     alert("El id ya existe");
   }
@@ -230,6 +227,32 @@ function obtenerProductosStorage() {
   }
 }
 
+function consultarProductosServer() {
+  //fetch("https://6244e0467701ec8f724a5a7f.mockapi.io/api/productos")
+  fetch("./productos.json")
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      productos = jsonResponse;
+      pintarProductos();
+    });
+}
+
+function crearProductoServer(producto) {
+  fetch("https://6244e0467701ec8f724a5a7f.mockapi.io/api/productos", {
+    method: "POST",
+    body: JSON.stringify(producto),
+  })
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      mostrarMensajeConfirmacion(
+        `El producto fue agregado exitosamente`,
+        "info"
+      );
+      console.log(jsonResponse);
+      consultarProductosServer()
+    });
+}
+
 function obtenerUsuarioStorage() {
   let usuarioAlmacenado = localStorage.getItem("usuario");
   if (usuarioAlmacenado) {
@@ -249,37 +272,11 @@ function mostrarMensajeConfirmacion(mensaje, clase) {
   }).showToast();
 }
 
-async function consultarProductosServer() {
-  // fetch("https://6244e0467701ec8f724a5a7f.mockapi.io/api/productos")
-  //   .then((response) => response.json())
-  //   .then((data) => console.log(data))
-  //   .catch((error) => console.log(error));
-
-  // fetch("./productos.json")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     productos = [...data]
-  //     pintarProductos();
-  //   })
-  //   .catch((error) => console.log(error));
-
-  try {
-    const response = await fetch(
-      "https://6244e0467701ec8f724a5a7f.mockapi.io/api/productos"
-    );
-    const data = await response.json();
-    productos = [...data];
-    pintarProductos();
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 function main() {
   inicializarElementos();
   inicializarEventos();
-  consultarProductosServer();
   //obtenerProductosStorage();
+  consultarProductosServer();
   obtenerUsuarioStorage();
 }
 
